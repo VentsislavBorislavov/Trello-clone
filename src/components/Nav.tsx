@@ -9,7 +9,7 @@ const Nav = () => {
       </h1>
       <div>
         <p>Logged User</p>
-        <AuthButton>Log in</AuthButton>
+        <AuthButton to="/auth">Log in</AuthButton>
       </div>
     </StyledNav>
   );
