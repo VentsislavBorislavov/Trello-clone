@@ -1,17 +1,24 @@
 import { BiColorFill } from "react-icons/bi";
-import { StyledBoard } from "../styles/Home.styled";
+import { StyledBoard, StyledTitleInput } from "../styles/Home.styled";
+import { useState } from "react";
 
 interface Props {
   color: string;
 }
 
 const HomeBoard = ({ color }: Props) => {
+  const [boardTitle, setBoardTitle] = useState("Title");
+
   return (
     <StyledBoard color={color}>
       <button>
         <BiColorFill />
       </button>
-      <h2>Title</h2>
+      <StyledTitleInput
+        type="text"
+        value={boardTitle}
+        onChange={(e) => setBoardTitle(e.target.value)}
+      />
     </StyledBoard>
   );
 };

@@ -43,11 +43,6 @@ export const StyledBoard = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 14px;
-  h2 {
-    margin: 0;
-    font-size: 2rem;
-    color: white;
-  }
 
   button {
     position: absolute;
@@ -65,5 +60,21 @@ export const StyledBoard = styled.div`
     &:hover {
       background-color: #0000004b;
     }
+  }
+`;
+
+export const StyledTitleInput = styled.input`
+  margin: 0;
+  font-size: 2rem;
+  color: white;
+  width: 80%;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  transition: background-color 100ms ease-in;
+
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.4);
+    outline: 2px solid #ffffffa9;
   }
 `;
