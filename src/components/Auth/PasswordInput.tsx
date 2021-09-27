@@ -10,6 +10,7 @@ interface Props {
   onChange: (value: string) => void;
   onFocus: () => void;
   onBlur: () => void;
+  placeholder: string;
 }
 
 const PasswordInput = ({
@@ -18,12 +19,13 @@ const PasswordInput = ({
   onFocus,
   onBlur,
   movePlaceholder,
+  placeholder,
 }: Props) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <StyledPasswordInput>
-      <span style={movePlaceholder ? spanStyle : {}}>Password</span>
+      <span style={movePlaceholder ? spanStyle : {}}>{placeholder}</span>
       <StyledInput
         onFocus={onFocus}
         onBlur={onBlur}

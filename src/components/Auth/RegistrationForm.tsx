@@ -3,7 +3,7 @@ import EmailInput from "./EmailInput";
 import PasswordInput from "./PasswordInput";
 import { StyledSubmit } from "../styles/AuthPage.styled";
 
-const LoginForm = () => {
+const RegistrationForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -19,9 +19,14 @@ const LoginForm = () => {
         value={password}
         onChange={(val: any) => setPassword(val)}
       />
-      <StyledSubmit type="submit">Continue</StyledSubmit>
+      <PasswordInput
+        placeholder="Repeat Password"
+        value={password}
+        onChange={(val: any) => setPassword(val)}
+      />
+      <StyledSubmit type="submit">Register</StyledSubmit>
     </form>
   );
 };
 
-export default LoginForm;
+export default RegistrationForm;

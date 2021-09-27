@@ -12,7 +12,9 @@ const Nav = () => {
       </h1>
       <div>
         <p>Logged User</p>
-        <AuthButton to="/auth">Log in</AuthButton>
+        <AuthButton to={{ pathname: "/auth", hash: "#login" }}>
+          Log in
+        </AuthButton>
       </div>
     </StyledNav>
   );

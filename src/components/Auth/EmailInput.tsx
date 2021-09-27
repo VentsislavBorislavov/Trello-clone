@@ -8,6 +8,7 @@ interface Props {
   onChange: (value: string) => void;
   onFocus: () => void;
   onBlur: () => void;
+  placeholder: string;
 }
 
 const EmailInput = ({
@@ -16,10 +17,11 @@ const EmailInput = ({
   onFocus,
   onBlur,
   movePlaceholder,
+  placeholder,
 }: Props) => {
   return (
     <StyledEmail>
-      <span style={movePlaceholder ? spanStyle : {}}>Email</span>
+      <span style={movePlaceholder ? spanStyle : {}}>{placeholder}</span>
       <StyledInput
         onFocus={onFocus}
         onBlur={onBlur}

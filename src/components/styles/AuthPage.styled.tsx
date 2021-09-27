@@ -87,8 +87,9 @@ export const StyledSubmit = styled.button`
 export const StyledRegisterText = styled.p`
   text-align: center;
 
-  span {
+  a {
     color: #0cb508;
+    text-decoration: none;
     font-weight: bold;
     cursor: pointer;
   }
