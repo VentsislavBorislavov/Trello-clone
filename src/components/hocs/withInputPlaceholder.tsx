@@ -1,20 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const withInputPlaceholder = (WrappedComponent: any) => {
+type Component = (props: any) => JSX.Element;
+
+const withInputPlaceholder = (WrappedComponent: Component) => {
   const WithInputPlaceholder = (props: any) => {
     const [movePlaceholder, setMovePlaceholder] = useState(false);
 
     const onFocus = () => {
-      if (!props.value || !movePlaceholder) {
-        setMovePlaceholder(!movePlaceholder);
+      if (!movePlaceholder) {
+        setMovePlaceholder(true);
       }
     };
 
     const onBlur = () => {
       if (movePlaceholder && !props.value) {
-        setMovePlaceholder(!movePlaceholder);
+        setMovePlaceholder(false);
       }
     };
+
+    useEffect(() => {
+      if (props.value && !movePlaceholder) {
+        setMovePlaceholder(true);
+      } else if (!props.value && movePlaceholder) {
+        setMovePlaceholder(false);
+      }
+    }, [props.value]);
+
     return (
       <WrappedComponent
         {...props}
