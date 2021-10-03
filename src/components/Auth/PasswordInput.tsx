@@ -1,7 +1,6 @@
 import { useState } from "react";
 import withInputPlaceholder from "../hocs/withInputPlaceholder";
 import { StyledPasswordInput, StyledInput } from "../styles/AuthPage.styled";
-import { spanStyle } from "./EmailInput";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 
 interface Props {
@@ -11,6 +10,7 @@ interface Props {
   onFocus: () => void;
   onBlur: () => void;
   placeholder: string;
+  placeholderStyle: {};
 }
 
 const PasswordInput = ({
@@ -18,14 +18,14 @@ const PasswordInput = ({
   onChange,
   onFocus,
   onBlur,
-  movePlaceholder,
   placeholder,
+  placeholderStyle,
 }: Props) => {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState<boolean>(false);
 
   return (
     <StyledPasswordInput>
-      <span style={movePlaceholder ? spanStyle : {}}>{placeholder}</span>
+      <span style={placeholderStyle}>{placeholder}</span>
       <StyledInput
         onFocus={onFocus}
         onBlur={onBlur}

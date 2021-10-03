@@ -9,6 +9,7 @@ interface Props {
   onFocus: () => void;
   onBlur: () => void;
   placeholder: string;
+  placeholderStyle: {};
 }
 
 const EmailInput = ({
@@ -17,11 +18,12 @@ const EmailInput = ({
   onFocus,
   onBlur,
   movePlaceholder,
+  placeholderStyle,
   placeholder,
 }: Props) => {
   return (
     <StyledEmail>
-      <span style={movePlaceholder ? spanStyle : {}}>{placeholder}</span>
+      <span style={placeholderStyle}>{placeholder}</span>
       <StyledInput
         onFocus={onFocus}
         onBlur={onBlur}
@@ -31,12 +33,6 @@ const EmailInput = ({
       />
     </StyledEmail>
   );
-};
-
-export const spanStyle: CSSProperties = {
-  top: 2,
-  fontSize: 14,
-  transform: "translateY(0)",
 };
 
 export default withInputPlaceholder(EmailInput);

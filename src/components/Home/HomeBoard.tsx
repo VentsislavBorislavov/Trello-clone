@@ -7,7 +7,7 @@ interface Props {
 }
 
 const HomeBoard = ({ color }: Props) => {
-  const [boardTitle, setBoardTitle] = useState("Title");
+  const [boardTitle, setBoardTitle] = useState<string>("Title");
 
   return (
     <StyledBoard color={color}>
