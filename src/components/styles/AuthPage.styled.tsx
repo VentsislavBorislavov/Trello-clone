@@ -19,8 +19,6 @@ export const StyledAuth = styled.div`
   }
 `;
 
-export const StyledLoginForm = styled.form``;
-
 export const StyledInput = styled.input`
   background-color: transparent;
   border: none;

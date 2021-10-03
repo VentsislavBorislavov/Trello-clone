@@ -7,7 +7,7 @@ const withInputPlaceholder = (WrappedComponent: Component) => {
     const [movePlaceholder, setMovePlaceholder] = useState(false);
 
     const onFocus = () => {
-      if (!movePlaceholder) {
+      if (props.value || !movePlaceholder) {
         setMovePlaceholder(true);
       }
     };
@@ -21,8 +21,6 @@ const withInputPlaceholder = (WrappedComponent: Component) => {
     useEffect(() => {
       if (props.value && !movePlaceholder) {
         setMovePlaceholder(true);
-      } else if (!props.value && movePlaceholder) {
-        setMovePlaceholder(false);
       }
     }, [props.value]);
 

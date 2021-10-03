@@ -6,6 +6,7 @@ import { StyledSubmit } from "../styles/AuthPage.styled";
 const RegistrationForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [repeatPassword, setRepeatPassword] = useState("");
 
   return (
     <form>
@@ -21,8 +22,8 @@ const RegistrationForm = () => {
       />
       <PasswordInput
         placeholder="Repeat Password"
-        value={password}
-        onChange={(val: any) => setPassword(val)}
+        value={repeatPassword}
+        onChange={(val: any) => setRepeatPassword(val)}
       />
       <StyledSubmit type="submit">Register</StyledSubmit>
     </form>
