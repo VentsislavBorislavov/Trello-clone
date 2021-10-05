@@ -3,7 +3,7 @@ import Nav from "./components/Nav";
 import Layout from "./components/Layout";
 import Home from "./components/home/Home";
 import AuthPage from "./components/auth/AuthPage";
-import Board from "./components/Board";
+import Board from "./components/board/Board";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
