@@ -1,5 +1,4 @@
 import { StyledInput, StyledEmail } from "../styles/AuthPage.styled";
-import { CSSProperties } from "styled-components";
 import withInputPlaceholder from "../hocs/withInputPlaceholder";
 
 interface Props {

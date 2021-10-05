@@ -1,4 +1,3 @@
-import React from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import ListItem from "./ListItem";
 import { StyledList, StyledAddItem } from "../styles/Board.styled";

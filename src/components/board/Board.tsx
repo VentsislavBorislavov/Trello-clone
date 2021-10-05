@@ -1,7 +1,4 @@
-import React from "react";
-import List from "./List";
-import { AiOutlinePlus } from "react-icons/ai";
-import { StyledBoard, StyledAddList } from "../styles/Board.styled";
+import { StyledBoard } from "../styles/Board.styled";
 import BoardLists from "./BoardLists";
 
 const Board = () => {

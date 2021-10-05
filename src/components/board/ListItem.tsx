@@ -1,4 +1,3 @@
-import React from "react";
 import { StyledListItem } from "../styles/Board.styled";
 
 const ListItem = () => {
